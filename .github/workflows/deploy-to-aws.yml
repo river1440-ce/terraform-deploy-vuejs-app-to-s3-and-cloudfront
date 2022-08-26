@@ -113,6 +113,7 @@ jobs:
 
   
   webapp:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     needs: terraform
     name:  Deploy webapp
     runs-on: ubuntu-latest
