@@ -3,11 +3,11 @@
 #################################
 
 locals {
-  s3_origin_id = "anotherbuginthecode.sandbox.com"
+  s3_origin_id = "anotherbuginthecode.bubblesdgs.net"
 }
 
 resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {
-  comment = "OAI for anotherbuginthecode.sandbox.com"
+  comment = "OAI for anotherbuginthecode.bubblesdgs.net"
 }
 
 resource "aws_cloudfront_distribution" "s3_distribution" {
@@ -22,7 +22,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
   enabled             = true
   is_ipv6_enabled     = true
-  comment             = "cloudfront for anotherbuginthecode.sandbox.com"
+  comment             = "cloudfront for anotherbuginthecode.bubblesdgs.net"
   default_root_object = "index.html"
 
   # Configure logging here if required 	
