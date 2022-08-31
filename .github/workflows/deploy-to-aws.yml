@@ -113,7 +113,6 @@ jobs:
       cloudfront_distribution: ${{ steps.terraform_outputs.outputs.CLOUDFRONT_DISTRIBUTION }}
       bucket_name: ${{ steps.terraform_outputs.outputs.BUCKET_NAME }}
 
-  
   webapp:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     needs: terraform

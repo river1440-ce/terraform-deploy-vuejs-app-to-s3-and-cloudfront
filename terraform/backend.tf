@@ -3,7 +3,7 @@ terraform {
     organization = "example-org-58ed50"
 
     workspaces {
-      name = "gh-actions-demo"
+      name = "terraform-deploy-vuejs-app-to-s3-and-cloudfront"
     }
   }
 }
